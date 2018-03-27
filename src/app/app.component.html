@@ -4,6 +4,19 @@
 
 <ul>
   <li *ngFor="let meme of memes">
-    {{meme.mAKeTExtgOod()}}
+    <p (click)="setActiveMeme(meme)">{{meme.goodText}}</p>
   </li>
 </ul>
+
+<div *ngIf="activeMeme != null">
+  <form (submit)="setActiveMeme(null)">
+    <textarea [(ngModel)]="activeMeme.text"
+    (ngModelChange)="activeMeme.setText($event)"
+    type="text" name="why" [value]="activeMeme.text"
+    rows=5 cols=50>
+    </textarea>
+    <button type="submit" name="button">Done</button>
+  </form>
+</div>
+
+<canvas id="game_canvas" width="800" height="600"></canvas>

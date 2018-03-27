@@ -1,7 +1,10 @@
 export class Meme {
-  constructor(public text: string) {}
+  public goodText: string;
+  constructor(public text: string) {
+    this.goodText = this.newGoodText();
+  }
 
-  mAKeTExtgOod(): string {
+  newGoodText(): string {
     let lower: string = this.text.toLowerCase();
     let chars: string[] = lower.split("");
     let output: string[] = [];
@@ -12,6 +15,12 @@ export class Meme {
         output.push(item);
       }
     });
-    return output.join("");
+    this.goodText = output.join("");
+    return this.goodText;
+  }
+
+  setText(newText: string): void {
+    this.text = newText;
+    this.newGoodText();
   }
 }
