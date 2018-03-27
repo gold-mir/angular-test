@@ -1,6 +1,5 @@
 import { Component } from '@angular/core';
 import { Meme } from './models/meme.model';
-import { Phaser } from 'phaser';
 
 @Component({
   selector: 'app-root',
@@ -21,7 +20,4 @@ export class AppComponent {
   setActiveMeme(meme: Meme){
     this.activeMeme = meme;
   }
-  public thing: Phaser.Game = new Phaser.Game(800, 600, Phaser.AUTO, 'game_canvas', {
-
-  });
 }
