@@ -30,3 +30,4 @@ To get more help on the Angular CLI use `ng help` or go check out the [Angular C
 * http://www.ng-newsletter.com/posts/building-games-with-angular.html
 * http://buildnewgames.com/real-time-multiplayer/
 * https://www.reddit.com/r/gamedev/comments/4xvnfb/html5_multiplayer_style_game_architecture/
+* https://medium.com/@REPTILEHAUS/angular-2-and-socket-io-chat-app-f56afb9ceeb2
